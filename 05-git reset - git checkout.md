@@ -24,5 +24,6 @@
 
 با checkout وضعیتی که با ریست ایجاد کرده ایم و فایلمان از حالت commit خارج شده است زا به حالت قبل یعنی commit شده بازمیگردانیم .
 
-```git checkout -- filename
+```
+git checkout -- filename
 ```
