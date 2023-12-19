@@ -58,3 +58,39 @@
   ```
 
 در این نمونه خروجی، خطوط قبل از `+` نشان‌دهنده خطوط اضافه شده است و خطوط قبل از `-` نشان‌دهنده خطوط حذف شده است.
+
+
+### `git diff stage`
+دستور `git diff --staged` یا `git diff --cached` برای مشاهده تفاوت‌ها بین وضعیت فایل‌های موجود در منطقه نگهداری (استیج یا staging area) و آخرین commit استفاده می‌شود. در زیر، یک مثال برای استفاده از `git diff --staged` یا `git diff --cached` آورده شده است:
+
+### `git diff --staged` یا `git diff --cached`:
+
+- **مثال:**
+  ```bash
+  git diff --staged
+  ```
+  یا
+  ```bash
+  git diff --cached
+  ```
+  - این دستور تفاوت‌ها بین وضعیت فایل‌های موجود در منطقه نگهداری (استیج) و آخرین commit را نمایش می‌دهد.
+
+- **نتیجه:**
+  - نتیجه این دستور ممکن است شامل خطوط اضافه یا حذف شده، همراه با اطلاعات commit مربوطه (نام نویسنده، تاریخ، پیام توضیحی) باشد.
+
+- **نمونه خروجی:**
+  ```
+  diff --git a/filename.txt b/filename.txt
+  index abcdef1..1234567 100644
+  --- a/filename.txt
+  +++ b/filename.txt
+  @@ -1,5 +1,5 @@
+   This is the content of the file.
+   Some changes have been made here.
+   A new line has been added.
+  +An additional change in the staged area.
+   Another line of text.
+   A line has been removed.
+  ```
+  
+در این نمونه خروجی، خطوط قبل از `+` نشان‌دهنده خطوط اضافه شده به منطقه نگهداری است و با استفاده از این دستور، می‌توانید تغییراتی که در حالت استیج قرار دارند را مشاهده کنید.
